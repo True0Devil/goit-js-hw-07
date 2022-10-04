@@ -14,7 +14,7 @@ for (const image of galleryItems) {
 
 galleryRef.innerHTML = markup;
 
-var lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captions: true,
   captionPosition: 'bottom',
   captionDelay: 250,
