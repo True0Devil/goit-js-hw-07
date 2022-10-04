@@ -6,7 +6,6 @@ console.log(galleryItems);
 // 1. Markup ================================================== //
 
 const galleryRef = document.querySelector('.gallery');
-// console.log(galleryRef)
 
 const markup = galleryItems
   .map(image => {
@@ -23,8 +22,6 @@ const markup = galleryItems
   })
   .join('');
 
-// console.log(markup)
-
 galleryRef.innerHTML = markup;
 
 // 2.Delegation ================================================ //
@@ -39,15 +36,15 @@ function onGalleryImageClick(e) {
   e.preventDefault();
 
   const instance = basicLightbox.create(`
-    <img src=${e.target.dataset.source} width="75%">
+    <img src=${e.target.dataset.source} width="300">
 `);
 
   instance.show();
 
-  document.addEventListener('keydown', eKeyboard => {
-      if (eKeyboard.key === 'Escape') {
-          instance.close();
-      }
-  });
-}
-
+  document.addEventListener('keydown', (eKeyboard) => {
+    if (eKeyboard.key === 'Escape') {
+      instance.close()
+    }
+    console.log(eKeyboard.key);
+  })
+};
