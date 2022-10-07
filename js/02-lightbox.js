@@ -31,5 +31,5 @@ function onGalleryImageClick(e) {
 
     e.preventDefault();
 
-    lightbox.open();    
+    lightbox.open;    
 }
